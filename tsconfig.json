@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "dom.iterable","esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -10,20 +11,61 @@
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "downlevelIteration": true,    
+    "sourceMap": true,    
+    "checkJs": false,  
+    // "rootDir": "src",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "keyofStringsOnly": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/ui/*": ["ui/*"],
+      "@/lib/*": ["src/lib/*"],
+      "@/styles/*": ["styles/*"]
+    },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/ui/LoadingError/Toast.tsx",
+    "src/ui/LoadingError/Loading.tsx",
+    "src/redux/Url/Url.tsx",
+    "src/ui/tests/home/pagination.tsx",
+    "src/components/OrderWizard.tsx",
+    "src/ui/tests/home/shop-section/ShopSection.tsx",
+    "src/redux/Url.js",
+    "src/templates/base/Base.tsx",
+    "src/utils/translate/i18n.js",
+    "src/app/useHome.jsx"
+, "src/app/product/[id]/useProduct.ts", "src/context/ProductContext/index.jsx", "src/ui/base/cart-item/index.jsx", "src/ui/tests/card2/index.jsx", "src/ui/base/header/index.jsx", "src/hooks/useHome.js", "src/ui/base/card-modern/index.jsx", "src/pages/index.tsx", "src/components/rating.jsx", "src/lib/getCategories.js"  ],
+  "exclude": [
+    "node_modules",
+    "cypress",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts"
+  ]
 }

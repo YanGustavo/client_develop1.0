@@ -1,0 +1,29 @@
+yarn run v1.22.19
+$ tailwindcss -i ./src/styles/globals.css -o ./src/styles/tailwind.css && next build
+
+Rebuilding...
+
+Done in 2250ms.
+info  - Loaded env from D:\Projects\eai-chefinho-ecommerce\client\.env
+warn  - You have enabled experimental feature (appDir) in next.config.js.
+warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+info  - Thank you for testing `appDir` please leave your feedback at https://nextjs.link/app-feedback
+
+info  - Creating an optimized production build...
+info  - Compiled successfully
+info  - Linting and checking validity of types...
+error - ESLint: Cannot read config file: D:\Projects\eai-chefinho-ecommerce\client\node_modules\eslint-config-prettier\react.js Error: "prettier/react" has been merged into "prettier" in eslint-config-prettier 8.0.0. See: https://github.com/prettier/eslint-config-prettier/blob/main/CHANGELOG.md#version-800-2021-02-21 Referenced from: D:\Projects\eai-chefinho-ecommerce\client\.eslintrc.json
+Failed to compile.
+
+./src/components/OrderWizard.tsx:111:23
+Type error: Not all code paths return a value.
+
+[0m [90m 109 | [39m  [0m
+[0m [90m 110 | [39m  [90m/*  eslint-disable  */[39m[0m
+[0m[31m[1m>[22m[39m[90m 111 | [39m  [36mconst[39m statusClass [33m=[39m (index[33m:[39many) [33m=>[39m {[0m
+[0m [90m     | [39m                      [31m[1m^[22m[39m[0m
+[0m [90m 112 | [39m    [36mif[39m (index [33m-[39m status [33m<[39m [35m1[39m) [36mreturn[39m classNames([32m'done'[39m)[33m;[39m[0m
+[0m [90m 113 | [39m    [36mif[39m (index [33m-[39m status [33m===[39m [35m1[39m) [36mreturn[39m classNames([32m'inProgress'[39m)[33m;[39m[0m
+[0m [90m 114 | [39m    [36mif[39m (index [33m-[39m status [33m>[39m [35m1[39m) [36mreturn[39m classNames([32m'undone'[39m)[33m;[39m[0m
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

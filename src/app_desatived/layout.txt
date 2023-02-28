@@ -1,0 +1,36 @@
+'use client'
+import React from "react";
+//import {usePathname} from 'next/navigation'
+//import { checkIsPublicRoute } from 'functions';
+//import PrivateRoute from 'utils/PrivateRoute';
+import store2 from "redux/store2";
+import { Provider } from "react-redux";
+import 'styles/tailwind/globals.css';
+
+import { StateProvider } from "context/state-provider";
+import reducer, { initialState } from "redux/reducer-temp";
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  //const pathname = usePathname()
+  //const isPublicPage = checkIsPublicRoute(pathname!);
+    // console.log(isPublicPage+"pagina publica");
+  return (
+    <html lang="pt-BR">      
+      <head />
+      <body> 
+      <p>oi</p>
+      <StateProvider initialState={initialState} reducer={reducer}>   
+      <Provider store={store2}>          
+        {children}
+        {/* {isPublicPage && children}
+        {!isPublicPage && <PrivateRoute>{children}</PrivateRoute>}   */}
+      </Provider>
+      </StateProvider>
+        </body>
+    </html>
+  )
+}
