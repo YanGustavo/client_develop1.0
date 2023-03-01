@@ -40,6 +40,7 @@ export default {
     black: '#0D0D0D',
     heading_color: '#2d4b2a',
     header_light: '#2d5734',
+    background: '#35511e',
   },
   spacings: {
     xxxsmall: '0.8rem',

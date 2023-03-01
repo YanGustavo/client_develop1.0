@@ -133,6 +133,7 @@ export const CreditCardStyle = styled.div`
       bottom: 0.375rem;  
       width: 2.55rem;  
       height: 1.5rem;  
+      color: #FFF;
  }  
  .card__vendor:before,  
  .card__vendor:after {  

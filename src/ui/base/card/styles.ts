@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import theme from 'styles/styled-components/theme';
 
-export const CardModernStyle = styled.div`
+export const CardStyle = styled.div`
 
 .cards {
   display: flex;

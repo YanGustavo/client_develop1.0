@@ -1,6 +1,6 @@
 import React from 'react';
 
-const useCardModernAnimate = () => { 
+const useCardAnimate = () => { 
   React.useEffect(() => {
     const container = document.querySelector(".cards");
     const color1 = document.querySelector(".color-1");
@@ -35,4 +35,4 @@ const useCardModernAnimate = () => {
  }, []); 
  return;  
 }
-export default useCardModernAnimate;
+export default useCardAnimate;

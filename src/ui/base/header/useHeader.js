@@ -13,14 +13,7 @@ const useHeader = () => {
    //const { cartItems } = cart;
   // const userLogin = useSelector((state) => state.userLogin);
   // const { userInfo } = userLogin;
-   const [{ cart }, dispatch] = useStateValue();
-   React.useEffect(() => {
-    const toggleIcon = document.querySelector(".toggleMenu");
-    toggleIcon.addEventListener("click", () => {
-      document.querySelector(".rightMenu").classList.toggle("active");
-    });
-  }, []);
-
+ 
   const logoutHandler = () => {
     //dispatchUserLogin(logout());
   };
@@ -34,8 +27,9 @@ const useHeader = () => {
     // }
   };
 
- return{
-  cart,
- };  
+//  return{
+//   cart,
+//  };  
+return;
 }
 export default useHeader;

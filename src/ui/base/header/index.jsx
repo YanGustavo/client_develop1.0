@@ -4,6 +4,7 @@ import React from 'react';
 import * as SHeader from './styles';
 import Link from 'next/link';
 import useHeader from "./useHeader";
+import useHeaderAnimate from "./useHeaderAnimate";
 import { Menu } from '@headlessui/react';
 import DropdownLink from 'ui/base/drop-down-link';
 import BarChart from "@mui/icons-material/BarChart";
@@ -11,9 +12,12 @@ import SearchRounded from "@mui/icons-material/SearchRounded";
 import ShoppingCartRounded from "@mui/icons-material/ShoppingCartRounded";
 
 export default function Header() {
- const {cart} = useHeader();
+ //const {cart} = useHeader();
+ useHeader();
+ useHeaderAnimate();
   return (
     <SHeader.HeaderStyle>
+      <header>
       <Link href="/">
       <img
         src="img/logo_name.png"
@@ -82,7 +86,9 @@ export default function Header() {
  </div>
      <div className="toggleMenu">
         <BarChart className="toggleIcon" />
-      </div>      
+      </div> 
+      <div className="lineGradientTop"></div> 
+      </header>    
     </SHeader.HeaderStyle>
    
 

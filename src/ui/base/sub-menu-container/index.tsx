@@ -1,6 +1,7 @@
 'use client';
 import React from "react";
 import Link from 'next/link';
+import * as SSubMenuContainer from './styles';
 import { ChevronRightRounded } from "@mui/icons-material";
 
 type SubMenuContainerProps = {
@@ -11,6 +12,7 @@ type SubMenuContainerProps = {
 
 const SubMenuContainer = ({title, subtitle, linkHref}: SubMenuContainerProps)  => {
   return (
+    <SSubMenuContainer.SubMenuContainerStyle>
     <div className="subMenuContianer">
       <h3>{title}</h3>
       <div className="viewAll">
@@ -23,6 +25,7 @@ const SubMenuContainer = ({title, subtitle, linkHref}: SubMenuContainerProps)  =
         
       </div>
     </div>
+    </SSubMenuContainer.SubMenuContainerStyle>
   );
 }
 export default SubMenuContainer;

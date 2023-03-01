@@ -1,55 +1,30 @@
 import React, {Suspense} from 'react';
 import Layout from 'components/layout';
+import * as SHome from './styles';
 import { Base } from 'templates/base';
-//import Link from 'next/link';
-// import { usePathname, useSearchParams } from 'next/navigation';
-//import ShopSection from "ui/test/shop-section";
 import SubMenuContainer from "ui/base/sub-menu-container";
 import BannerName from "ui/base/banner-name";
  import MenuCard from "ui/base/menu-card";
- //import CategoriesCarousel from "ui/test/categories-carousel";
-//import ItemCard from "ui/test/card2";
- import CardModern from "ui/base/card-modern";
+ import Card from "ui/base/card";
 import useHome from "hooks/useHome";
-
 import { Skeleton} from 'components/Skeleton';
-//{ category }: { category: Category }
-export default function Home() {
-  // const pathname = usePathname();//const keyword = "";//match.params.keyword;
-  // const searchParams = useSearchParams();//const pagenumber = 1;//match.params.pagenumber;
-  // console.log("pathname:"+pathname);
-  // console.log("searchParams:"+searchParams);  
+import Breadcrumbs from "components/Breadcrumbs";
+
+
+export default function Home() { 
   const { MenuItems, isMainData, setData } = useHome(); 
   return (
     <Layout title="Home">
     <Suspense fallback={<Skeleton/>}>
-     <Base>     
-     <div className="mainContainer">
-          {/* Banner  */}
-          <div className="banner">
-          <Suspense fallback={<Skeleton/>}>
-             {/* <BannerName name={userInfo ? (`${userInfo.name}`) : ("Chefinho")} discount={"20"} more={"#"} /> */}
-             <BannerName name="Chefinho" discount={"20"} more={"#"} />
-             </Suspense>
-             <img
-              src="https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fdelivery.png?alt=media&token=69b9823d-96df-452a-bd4e-14d27a4cc337"
-              alt=""
-              className="deliveryPic"
-            />
-          </div>
-
-          <div className="dishContainer">
-            <div className="menuCard">
-            <Suspense fallback={<Skeleton/>}>
-               <SubMenuContainer title="iPhones" subtitle="Saiba Mais" linkHref="/login" />
-            </Suspense>
-            </div>
-
+     <Base>
+     <SHome.HomeStyle>  
+     <div className="container">
+      <Suspense fallback={<Skeleton/>}>
+      <BannerName name="Chefinho" discount={"20"} more={"#"} />
+      </Suspense>
+       <div className="wrapper">
             
-          
-            <div className="rowContainer" hidden>
-                  <div>
-                  {/* <CardModern/> */}
+             <section className="row">
                   <Suspense fallback={<Skeleton/>}>
                   {MenuItems &&
                   MenuItems.map((data:any) => (
@@ -62,14 +37,17 @@ export default function Home() {
                   </div>
                 ))}
                 </Suspense>
-                  </div>
-            </div>
-           
-            <div className="dishItemContainer">
+            </section> 
+            <section className="menuCard">
+            <Suspense fallback={<Skeleton/>}>
+               <SubMenuContainer title="iPhones" subtitle="Saiba Mais" linkHref="/login" />
+            </Suspense>
+            </section>           
+            <section className="item-card-wrapper">
                <Suspense fallback={<Skeleton/>}>
                {isMainData &&
                 isMainData.map((data) => (                    
-              <CardModern 
+              <Card
               key={data.id}
               itemId={data.id}
               imgSrc={data.imgSrc}
@@ -78,25 +56,11 @@ export default function Home() {
               price={data.price}
               />      
            ))}
-            </Suspense>
-             {/* <ShopSection/> */}
-             {/* <Suspense fallback={<Skeleton/>}>
-             {isMainData &&
-                isMainData.map((data) => (
-                  <ItemCard
-                    key={data.id}
-                    itemId={data.id}
-                    imgSrc={data.imgSrc}
-                    name={data.name}
-                    ratings={data.ratings}
-                    price={data.price}
-                    
-                  />
-                ))}
-                </Suspense> */}
-            </div>
+            </Suspense>            
+            </section>
           </div>
-        </div>        
+        </div> 
+        </SHome.HomeStyle>         
      </Base>
      </Suspense>
     </Layout>

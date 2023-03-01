@@ -1,19 +1,19 @@
 import React from 'react';
-import * as S from './styles';
-import useCardModern from "./useCardModern";
-import useCardModernAnimate from "./useCardModernAnimate";
+import * as SCard from './styles';
+import useCard from "./useCard";
+import useCardAnimate from "./useCardAnimate";
 import Rating from "components/rating";
 import AddRounded from "@mui/icons-material/AddRounded";
 import Favorite from "@mui/icons-material/Favorite";
 import StarRounded from "@mui/icons-material/StarRounded";
 
 
- const CardModern = (itemId, imgSrc, name, price, ratings,) => {
+ const Card = (itemId, imgSrc, name, price, ratings,) => {
   console.log(ratings);
-  const {isFavourite, currentValue, setIsFavourite, setCart, handleClick,} = useCardModern(ratings); //itemId, imgSrc, name, price, ratings, 
-  useCardModernAnimate(); 
+  const {isFavourite, currentValue, setIsFavourite, setCart, handleClick,} = useCard(ratings); //itemId, imgSrc, name, price, ratings, 
+  useCardAnimate(); 
 return (
-  <S.CardModernStyle>
+  <SCard.CardStyle>
       <section className="card-wrapper">
         <div className="card">
           <div className="card-top">  
@@ -81,7 +81,7 @@ return (
           </div>
         </div>
       </section>
-  </S.CardModernStyle>
+  </SCard.CardStyle>
 );
 }
-export default CardModern;
+export default Card;

@@ -3,7 +3,7 @@ const useMenuCardAnimate = () => {
    React.useEffect(() => {    
   // menu Card active class changer
     const menuCard = document
-    .querySelector(".rowContainer")
+    .querySelector(".rowMenuCard")
     .querySelectorAll(".rowMenuCard");
   
     function setMenuCardActive() {

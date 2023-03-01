@@ -57,7 +57,7 @@
     "src/templates/base/Base.tsx",
     "src/utils/translate/i18n.js",
     "src/app/useHome.jsx"
-, "src/app/product/[id]/useProduct.ts", "src/context/ProductContext/index.jsx", "src/ui/base/cart-item/index.jsx", "src/ui/tests/card2/index.jsx", "src/ui/base/header/index.jsx", "src/hooks/useHome.js", "src/ui/base/card-modern/index.jsx", "src/pages/index.tsx", "src/components/rating.jsx", "src/lib/getCategories.js"  ],
+, "src/app/product/[id]/useProduct.ts", "src/context/ProductContext/index.jsx", "src/ui/base/cart-item/index.jsx", "src/ui/tests/item-card/index.jsx", "src/ui/base/header/index.jsx", "src/hooks/useHome.js", "src/ui/base/card/index.jsx", "src/pages/index.tsx", "src/components/rating.jsx", "src/lib/getCategories.js", "src/ui/base/menu-right/index.tsx"  ],
   "exclude": [
     "node_modules",
     "cypress",
