@@ -4,8 +4,8 @@ import theme from 'styles/styled-components/theme';
 
 export const MenuCardStyle = styled.div`
 .rowMenuCard  {
-  width: 11rem;
-  height: 12rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 0.4rem;
   //background: #fff;
   margin-right: 0.5rem;
@@ -26,8 +26,8 @@ export const MenuCardStyle = styled.div`
  // background: ${theme.colors.heading_color};
 }
 .rowMenuCard .imgBox {
-  width: 11rem;
-  height: 11rem;
+  width: 4rem;
+  height: 4rem;
   min-width: 100px;
   min-height: 100px;
   border-radius: 100%;
@@ -116,5 +116,45 @@ export const MenuCardStyle = styled.div`
   color: ${theme.colors.white};
   opacity: 1;
   transition: 1s;
+}
+@media screen and (min-width: 1140px) {
+  .rowMenuCard {
+    width: 7rem;
+  height: 8rem;
+  }
+  .rowMenuCard .imgBox {
+    width: 7rem;
+  height: 7rem;
+  }
+}
+@media screen and (min-width: 1232px) {
+  .rowMenuCard {
+    width: 8rem;
+  height: 9rem;
+  }
+  .rowMenuCard .imgBox {
+    width: 8rem;
+  height: 8rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .rowMenuCard {
+    width: 9rem;
+  height: 10rem;
+  }
+  .rowMenuCard .imgBox {
+    width: 9rem;
+  height: 9rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .rowMenuCard {
+    width: 11rem;
+  height: 12rem;
+  }
+  .rowMenuCard .imgBox {
+    width: 11rem;
+  height: 12rem;
+  }
 }
 `;

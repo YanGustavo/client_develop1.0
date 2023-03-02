@@ -114,6 +114,46 @@ Link, a {
   color: #373848;
   font-size: 30px !important;
 }
+@keyframes toggleMenuAnimate {
+  0% {
+        transform: rotate(0deg)
+    }
+    20% {
+        transform: rotate(170deg)
+    }
+    25% {
+        transform: rotate(140deg) translate(1px, 0);
+    }
+    30% {
+        transform: rotate(170deg) translate(2px, 0);
+    }
+    
+
+    45% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+    55% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+
+
+    60% {
+        transform: rotate(-30deg) translate(1px, 0);
+    }
+    70% {
+        transform: rotate(0deg) translate(2px, 0)
+    }
+    80% {
+        transform: rotate(-30deg) translate(3px, 0)
+    }
+    90% {
+        transform: rotate(0deg) translate(3px, 0)
+    }
+    100% {
+        transform: rotate(-30deg)  translate(4px, 0)
+    }
+}
+
 .lineGradientTop {
   position: absolute;
   top: 60px;

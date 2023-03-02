@@ -37,10 +37,10 @@ export default {
     purple_100: '#7F57DF',
     purple_300: '#5855E9',
     red_300: '#FF6666',
-    black: '#0D0D0D',
     heading_color: '#2d4b2a',
     header_light: '#2d5734',
     background: '#35511e',
+    black: '#000000',
   },
   spacings: {
     xxxsmall: '0.8rem',

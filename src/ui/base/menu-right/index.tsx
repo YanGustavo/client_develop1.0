@@ -6,7 +6,8 @@ import useMenuRight from "./useMenuRight";
 import useMenuRightAnimate from "./useMenuRightAnimate";
 import CreditCard from "ui/base/credit-card";
 import CartItem from "ui/base/cart-item";
-import Footer from "ui/base/footer";
+import MenuBottom from "ui/base/menu-bottom";
+//import Footer from "ui/base/footer";
 
 
  const MenuRight = () => {
@@ -53,7 +54,7 @@ return (
               </div> 
             </div> 
             <section className="footer-component">
-              <Footer/>
+              <MenuBottom/>
             </section> 
                      
         </div>  

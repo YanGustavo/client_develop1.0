@@ -2,17 +2,23 @@ import styled from 'styled-components';
 import theme from 'styles/styled-components/theme';
 export const MenuBottomStyle = styled.div`
 .menuBottom {
-  position: fixed;
+  /* position: fixed;
   bottom: 0;
-  left: calc(100vw - 75vw);
+  left: calc(100vw - 75vw); */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50vw;
-  height: 60px;
+  /* width: 50vw;
+  
   background: #d5d5d5;
   border-radius: 25px 25px 0px 0px;
-  z-index: 3;
+  z-index: 3; */
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  height: 60px;
+  
 }
 
 .menuBottom ul {
@@ -120,27 +126,27 @@ export const MenuBottomStyle = styled.div`
 }
 @media screen and (min-width: 375px) {
   .menuBottom {
-    left: calc(100vw - 99vw);
-    width: 98vw;
+    /* left: calc(100vw - 99vw);
+    width: 98vw; */
   }
 }
 @media screen and (min-width: 650px) {
   .menuBottom {
-    left: calc(100vw - 90vw);
-    width: 80vw;
+    /* left: calc(100vw - 90vw);
+    width: 80vw; */
   }
 }
 
 @media screen and (min-width: 950px) {
   .menuBottom {
-    left: calc(100vw - 90vw);
-    width: 50vw;
+    /* left: calc(100vw - 90vw);
+    width: 50vw; */
   }
 }
 @media screen and (min-width: 1500px) {
   .menuBottom {
-    left: calc(100vw - 75vw);
-    width: 50vw;
+    /* left: calc(100vw - 75vw);
+    width: 50vw; */
   }
 }
 `;

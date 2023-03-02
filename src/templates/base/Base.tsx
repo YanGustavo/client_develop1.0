@@ -4,7 +4,7 @@ import React, {Suspense} from 'react';
 import { Skeleton} from 'components/Skeleton';
 import * as SBase from './styles';
 import Header from "ui/base/header";
-import MenuBottom from "ui/base/menu-bottom";
+import Footer from "ui/base/footer";
 import MenuRight from "ui/base/menu-right";
 import Breadcrumbs from "components/Breadcrumbs";
 
@@ -17,12 +17,13 @@ const Base = ({children}: { children: React.ReactNode }) => {
     <Suspense fallback={<Skeleton/>}>
       <Header/> 
     </Suspense>
-    <MenuBottom/>    
+       
     <main>    
     <Suspense fallback={<Skeleton/>}> 
       {children}  
     </Suspense>
     </main>  
+    <Footer/> 
     <MenuRight/>
     
   </div> 

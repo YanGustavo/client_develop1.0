@@ -7,8 +7,8 @@ export const MenuRightStyle = styled.div`
   position: fixed;  
   top: 0;
   right: 0;
-  width: 350px;
-  height: calc(100vh - 60px);
+  width: 100vw;
+  height: 100vh;
   background: #fff;
   z-index: 105;
   display: flex;
@@ -28,8 +28,8 @@ export const MenuRightStyle = styled.div`
   padding: 10px;
   width: 100%;
   height: auto;
-  padding: 30px 20px;
   position: relative;
+  padding-top: 10px;
 }
 
 .debitCard {
@@ -39,6 +39,10 @@ export const MenuRightStyle = styled.div`
   min-width: 300px;
   min-height: 170px;
   border-radius: 15px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+
 }
 
 .debitCard::before {
@@ -306,8 +310,8 @@ export const MenuRightStyle = styled.div`
 }
 
 .addSomeItem {
-  width: 100%;
-  height: 100%;
+  width: 20rem;
+  height: 25rem;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -327,6 +331,24 @@ export const MenuRightStyle = styled.div`
   height: auto;
   z-index: 106;
 }
+@media screen and (min-width: 541px) {
+  .menuRight {
+    width: 280px;
+  }
+   .addSomeItem {
+    width: 15rem;
+  height: 20rem;
+  }
+}
+@media screen and (min-width: 650px) {
+  .menuRight {
+    width: 300px;
+  }
+  .addSomeItem {
+    width: 18rem;
+  height: 23rem;
+  }
+}
 @media screen and (min-width: 950px) {
   .menuRight {
     position: fixed;
@@ -335,6 +357,20 @@ export const MenuRightStyle = styled.div`
     top: 60px;
     height: calc(100vh-65px);
     position: fixed;
+    width: 325px;
+  }
+  .addSomeItem {
+    width: 19rem;
+  height: 24rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .menuRight {
+    width: 350px;
+  }
+  .addSomeItem {
+    width: 20rem;
+  height: 25rem;
   }
 }
 `;

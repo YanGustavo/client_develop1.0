@@ -85,7 +85,14 @@ export default function Header() {
               {!userInfo && (<Link href="/login">Área de Pedidos</Link>)} */}
  </div>
      <div className="toggleMenu">
-        <BarChart className="toggleIcon" />
+        <BarChart className="toggleIcon" css={{
+        "&:hover": {
+          "path:first-of-type": {
+            transformOrigin: "center",
+            animation: "toggleMenuAnimate  1.5s forwards 1",
+          },
+        },
+      }} />
       </div> 
       <div className="lineGradientTop"></div> 
       </header>    
