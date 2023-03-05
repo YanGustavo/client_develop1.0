@@ -8,9 +8,8 @@ import Favorite from "@mui/icons-material/Favorite";
 import StarRounded from "@mui/icons-material/StarRounded";
 
 
- const Card = (itemId, imgSrc, name, price, ratings,) => {
-  console.log(ratings);
-  const {isFavourite, currentValue, setIsFavourite, setCart, handleClick,} = useCard(ratings); //itemId, imgSrc, name, price, ratings, 
+ const Card = (product) => {
+  const {isFavourite, setIsFavourite, setCart, handleClick,} = useCard(); //itemId, imgSrc, name, price, ratings, 
   useCardAnimate(); 
 return (
   <SCard.CardStyle>
@@ -28,7 +27,7 @@ return (
             </div>
             <div className="card-top-text">
             <div className="stars">
-              {Array.apply(null, { length: 5 }).map((e, i) => (
+              {/* {Array.apply(null, { length: 5 }).map((e, i) => (
               <i
                 key={i}
                 className={`rating ${currentValue > i ? "orange" : "gray"}`}
@@ -36,10 +35,13 @@ return (
               >
                 <StarRounded />
               </i>
-            ))}
+            ))} */}
             </div>              
             </div>
-            <img src={imgSrc} className="product-1 opacity" />
+            {/* { product.images.map((image) => (                
+                <img key={image.id} src={image.url} className="product-1 opacity" />   
+           ))} */}
+           <img src="/img/iphone-12-1.png" className="product-1" />
             <img src="/img/iphone-12-2.png" className="product-2" />
           </div>
           <div className ="card-line-center">                     
@@ -47,7 +49,7 @@ return (
             <span>Vitrine</span>
           </div>
           <div className="card-bottom">  
-          <span className="product-name">{name}</span>           
+          <span className="product-name">{product.handle}</span>           
             <div className="size">
               <h4>Capacidade</h4>
               <div className="sizes">
@@ -67,7 +69,7 @@ return (
             </div>
             <div className="price">
               <span>R$</span>
-              <span>{price}</span>
+              <span>price</span>
             </div> 
             <img src="/img/brand/apple.png" className="logo" />  
             <i

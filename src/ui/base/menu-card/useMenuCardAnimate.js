@@ -1,6 +1,7 @@
 import React from 'react';
 const useMenuCardAnimate = () => { 
-   React.useEffect(() => {    
+   React.useEffect(() => {  
+    if (typeof document != "undefined") {   
   // menu Card active class changer
     const menuCard = document
     .querySelector(".rowMenuCard")
@@ -13,6 +14,7 @@ const useMenuCardAnimate = () => {
     });
     }
     menuCard.forEach((n) => n.addEventListener("click", setMenuCardActive));
+    }
   }, []); 
  return;  
 }

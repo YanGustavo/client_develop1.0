@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react';
+import React from 'react'; //, {Suspense}
 import Layout from 'components/layout';
 import { Base } from 'templates/base';
 //import Link from 'next/link';
@@ -11,9 +11,9 @@ export default function Payment () {
   return (
     <Layout title="Login">
     <Base>
-        <Suspense fallback={<Skeleton/>}>
+        {/* <Suspense fallback={<Skeleton/>}> */}
         <StepCheckout/>
-        </Suspense>
+        {/* </Suspense> */}
          
     </Base>
     </Layout>

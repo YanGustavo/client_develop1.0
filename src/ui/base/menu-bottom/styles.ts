@@ -15,8 +15,8 @@ export const MenuBottomStyle = styled.div`
   z-index: 3; */
   position: absolute;
   bottom: 0;
-  left: 5%;
-  width: 90%;
+  left: 10%;
+  width: 80%;
   height: 60px;
   
 }
@@ -102,7 +102,7 @@ export const MenuBottomStyle = styled.div`
 }
 
 .menuBottom ul li:nth-child(1).active ~ .indicator {
-  transform: translateX(calc(60px * 0));
+  transform: translateX(calc(55px * 0));
 }
 
 .menuBottom ul li:nth-child(2).active ~ .indicator {

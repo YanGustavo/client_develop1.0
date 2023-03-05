@@ -8,6 +8,7 @@ import CreditCard from "ui/base/credit-card";
 import CartItem from "ui/base/cart-item";
 import MenuBottom from "ui/base/menu-bottom";
 //import Footer from "ui/base/footer";
+import CloseIcon from '@mui/icons-material/Close';
 
 
  const MenuRight = () => {
@@ -16,6 +17,9 @@ import MenuBottom from "ui/base/menu-bottom";
 return (
       <SMenuRight.MenuRightStyle>
          <div className="menuRight">
+         <div className="closeMenu">
+        <CloseIcon className="toggleIcon"/>
+      </div>
           <div className="debitCardContainer">
           <CreditCard name="Yan Gustavo" />
           </div>          

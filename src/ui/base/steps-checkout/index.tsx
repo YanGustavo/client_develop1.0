@@ -2,28 +2,71 @@ import React from 'react'; //, {Suspense}
 //import Link from 'next/link';
 import * as SStepsCheckout from './styles';
 //import { Skeleton} from 'components/Skeleton';
-import useStepsCheckout from "./useStepCheckout";
-import useStepsCheckoutAnimate from "./useStepCheckoutAnimate";
+import useStepsCheckout from "./useStepsCheckout";
+import useStepsCheckoutAnimate from "./useStepsCheckoutAnimate";
+import AccountBalanceWalletRounded from "@mui/icons-material/AccountBalanceWalletOutlined";
+import Chat from "@mui/icons-material/Chat";
+import Favorite from "@mui/icons-material/Favorite";
+import HomeRounded from "@mui/icons-material/HomeRounded";
+import SummarizeRounded from "@mui/icons-material/SummarizeRounded";
 
 
  const StepsCheckout = () => {
   useStepsCheckout();
-  useStepsCheckoutAnimate(); 
+  
+  //useStepsCheckoutAnimate(nav); 
+//   React.useEffect(() => {
+//   const nav  = React.useRef();
+//   const navA = nav.current.querySelectorAll("a");
+//  function setLeftMenuActive() {
+//   navA.forEach((n) => {
+//    n.classList.remove("active");
+//    this.classList.addClass("active");
+
+//     if(this.id === !"payment"){
+//       document.querySelector(".payment").addClass("noshow");
+//   }
+//   else if(this.id === "payment") {
+//     document.querySelector(".payment").removeClass("noshow");
+//     document.querySelector(".rightbox").children().not(".payment").addClass("noshow");
+//   }
+//   else if (this.id === "profile") {
+//     document.querySelector(".profile").removeClass("noshow");
+//     document.querySelector(".rightbox").children().not(".profile").addClass("noshow");
+//   }
+//   else if(this.id === "subscription") {
+//     document.querySelector(".subscription").removeClass("noshow");
+//     document.querySelector(".rightbox").children().not(".subscription").addClass("noshow");
+//   }
+//     else if(this.id === "privacy") {
+//       document.querySelector(".privacy").removeClass("noshow");
+//       document.querySelector(".rightbox").children().not('.privacy').addClass("noshow");
+//   }
+//   else if(this.id === "settings") {
+//     document.querySelector(".settings").removeClass("noshow");
+//     document.querySelector(".rightbox").children().not(".settings").addClass("noshow");
+//   }
+//  });
+//  }
+// navA.forEach((n) => n.addEventListener("click", setLeftMenuActive()));
+  // },[]); 
+
 return (
       <SStepsCheckout.StepCheckoutStyle>
-        <div className="container">
-  <div id="logo"><h1 className="logo">hulu</h1>
+        <div className="container mx-auto px-4">
+  <div id="logo"><img src="favicon.png" className="logo" />
     <div className="CTA">
       <h1>Get $10</h1>
       </div>
   </div>
   <div className="leftbox">
+    {/* <nav ref={nav}> */}
     <nav>
-      <a id="profile" className="active"><i className="fa fa-user"></i></a>
-      <a id="payment"><i className="fa fa-credit-card"></i></a>
-      <a id="subscription"><i className="fa fa-tv"></i></a>
-      <a id="privacy"><i className="fa fa-tasks"></i></a>
-      <a id="settings"><i className="fa fa-cog"></i></a>
+      <a id="profile" className="active"><HomeRounded/></a>
+      <a id="payment"><Chat/></a>
+      <a id="subscription"><AccountBalanceWalletRounded/></a>
+      <a id="privacy"><Favorite/></a>
+      <a id="settings"><SummarizeRounded/></a>
     </nav>
   </div>
   <div className="rightbox">

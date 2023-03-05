@@ -4,7 +4,7 @@ import theme from 'styles/styled-components/theme';
 
 export const MenuRightStyle = styled.div`
 .menuRight {  
-  position: absolute;  
+  position: fixed;  
   top: 0;
   right: 0;
   width: 100vw;
@@ -23,38 +23,7 @@ export const MenuRightStyle = styled.div`
 .menuRight.active {
   transform: translateX(0%);
 }
-@keyframes closeMenuAnimation {
-	0% { opacity: 0; transform: translateY(-2px); color: indigo;  }
-  25% { opacity: 0; transform: translateY(-2px); color: green;  }
-	50% { opacity: 1; transform: translateY(0); color: greenyellow;}
-	100% { opacity: 0; transform: translateY(2px); color: green;}
-}  
-.closeMenu {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 109;
-  transform: translateX(0);
-}
 
-
-.closeMenu.toggleIcon {
-  color: #373848;
-  font-size: 30px !important;
-  transition: all 0.5s ease; 
-  animation: closeMenuAnimation 1.5s infinite; 
-  
-}
-.closeMenu::after  {
-  content: "Fechar";
-  position: absolute;
-  top: 1.2rem;
-  right: -0.7rem;
-  width: 18px;
-  height: auto;
-  font-size: 0.7rem;
-  color: ${theme.colors.heading_color};
-}
 .debitCardContainer {
   padding: 10px;
   width: 100%;
@@ -365,18 +334,16 @@ export const MenuRightStyle = styled.div`
 @media screen and (min-width: 541px) {
   .menuRight {
     width: 280px;
-    height: calc(100vh - 105px);
-    transform: translateX(0%);
   }
    .addSomeItem {
     width: 15rem;
-    height: 20rem;
+  height: 20rem;
   }
 }
 @media screen and (min-width: 650px) {
   .menuRight {
     width: 300px;
-  } 
+  }
   .addSomeItem {
     width: 18rem;
   height: 23rem;
@@ -384,10 +351,13 @@ export const MenuRightStyle = styled.div`
 }
 @media screen and (min-width: 950px) {
   .menuRight {
-    width: 325px;    
-  }
-  .closeMenu {
-    transform: translateX(200%);
+    position: fixed;
+    z-index: 1;
+    transform: translateX(0%);
+    top: 60px;
+    height: calc(100vh-65px);
+    position: fixed;
+    width: 325px;
   }
   .addSomeItem {
     width: 19rem;

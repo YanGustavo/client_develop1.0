@@ -3,9 +3,9 @@ import { actionType } from "redux/reducer-temp";
 import { useStateValue } from "context/state-provider";
 import { Items } from "utils/data";
 
-const useCard = (ratings) => { //itemId, imgSrc, name, price, ratings,
+const useCard = () => { //itemId, imgSrc, name, price, ratings,
   // const {itemId, imgSrc, name, price, ratings,} = React.useState(itemId, imgSrc, name, price, ratings,);
-  const [currentValue, setCurrentValue] = React.useState(Math.floor(ratings));
+  //const [currentValue, setCurrentValue] = React.useState(Math.floor(ratings));
   const [isFavourite, setFavourite] = React.useState(false);
   const [{}, dispatch] = useStateValue();
   const [isCart, setCart] = React.useState(null);
@@ -33,7 +33,7 @@ const useCard = (ratings) => { //itemId, imgSrc, name, price, ratings,
  return(
   
   isFavourite,  
-  currentValue,
+  //currentValue,
   setIsFavourite,
   setIsFavourite,
   setCart,

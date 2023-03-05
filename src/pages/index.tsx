@@ -8,11 +8,10 @@ import BannerName from "ui/base/banner-name";
  import Card from "ui/base/card";
 import useHome from "hooks/useHome";
 import { Skeleton} from 'components/Skeleton';
-import Breadcrumbs from "components/Breadcrumbs";
 
 
 export default function Home() { 
-  const { MenuItems, isMainData, setData } = useHome(); 
+  const { response, MenuItems, setData } = useHome(); // isMainData,
   return (
     <Layout title="Home">
     <Suspense fallback={<Skeleton/>}>
@@ -44,17 +43,10 @@ export default function Home() {
             </Suspense>
             </section>           
             <section className="item-card-wrapper">
-               <Suspense fallback={<Skeleton/>}>
-               {isMainData &&
-                isMainData.map((data) => (                    
-              <Card
-              key={data.id}
-              itemId={data.id}
-              imgSrc={data.imgSrc}
-              name={data.name}
-              ratings={data.ratings}
-              price={data.price}
-              />      
+               <Suspense fallback={<Skeleton/>}>                
+               {response &&
+                response.map((product:any) => (                
+               <Card key={product.id} product={product}/>      
            ))}
             </Suspense>            
             </section>

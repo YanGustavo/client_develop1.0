@@ -6,7 +6,7 @@ export const StepCheckoutStyle = styled.div`
 
 .container {
   background: ${theme.colors.white};
-  width: 540px;
+  width: 90rem;
   height: 420px;
   margin: 0 auto;
   position: relative;
@@ -58,27 +58,37 @@ export const StepCheckoutStyle = styled.div`
   height: 110%;
   background: ${theme.colors.heading_color};
   box-shadow: 3px 3px 10px rgba($gray, .5);
+  border: 4px dotted ${theme.colors.white};
 }
-
 nav a {
   list-style: none;
-  padding: 35px;
+  padding: 30px;  
   color: ${theme.colors.white};
-  font-size: 1.1em;
   display: block;
-  transition: all .3s ease-in-out;
+  justify-content: center;
+  align-items: center;  
   &:hover {
-    color: ${theme.colors.gray_300};
-    transform: scale(1.2);
-    cursor: pointer;
+    
   }
   &:first-child {
     margin-top: 7px;
   }
 }
+nav a .MuiSvgIcon-root {
+  opacity: 0.5;
+  transition: 1s;
+  font-size: 1.1em !important;
+  color: #faf9fb;
+  transition: all .3s ease-in-out;
+}
 
-.active {
-  color: ${theme.colors.gray_300};
+nav a:hover .MuiSvgIcon-root,
+nav a.active .MuiSvgIcon-root {
+  color: ${theme.colors.white};
+  opacity: 1;
+  transition: 1s;
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .rightbox {
@@ -159,5 +169,20 @@ input {
 
 .noshow {
   opacity: 0;
+}
+@media screen and (min-width: 541px) {
+
+}
+@media screen and (min-width: 650px) {
+
+}
+@media screen and (min-width: 950px) {
+
+}
+@media screen and (min-width: 1100px) {
+  .container {
+    //left: calc(100% -10%);
+    //width: 80%;
+}
 }
 `;

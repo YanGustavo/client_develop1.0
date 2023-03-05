@@ -1,18 +1,28 @@
 import styled from 'styled-components';
 import theme from 'styles/styled-components/theme';
 export const HeaderStyle = styled.div`
-header{
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+.header{
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 5px 15px;
-  height: 60px;
+  min-height: 60px;
   width: 100%;
-  background: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 101;
+  background: #fff;  
+  
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
   z-index: 108;
 } 
@@ -107,62 +117,54 @@ header{
 Link, a {
   text-decoration:none;
 }
+
+@keyframes toggleMenuAnimation {
+	0% { opacity: 0; transform: translateY(-2px); color: indigo;  }
+  25% { opacity: 0; transform: translateY(-2px); color: green;  }
+	50% { opacity: 1; transform: translateY(0); color: greenyellow;}
+	100% { opacity: 0; transform: translateY(2px); color: green;}
+}  
 .toggleMenu {
   transform: rotate(90deg);
 }
+.toggleMenu .hidden {
+  display:none;
+}
+
 .toggleMenu .toggleIcon {
   color: #373848;
   font-size: 30px !important;
+  transition: all 0.5s ease; 
+  animation: toggleMenuAnimation 1.5s infinite; 
+  
 }
-@keyframes toggleMenuAnimate {
-  0% {
-        transform: rotate(0deg)
-    }
-    20% {
-        transform: rotate(170deg)
-    }
-    25% {
-        transform: rotate(140deg) translate(1px, 0);
-    }
-    30% {
-        transform: rotate(170deg) translate(2px, 0);
-    }
-    
-
-    45% {
-        transform: rotate(0deg) translate(0, 0);
-    }
-    55% {
-        transform: rotate(0deg) translate(0, 0);
-    }
-
-
-    60% {
-        transform: rotate(-30deg) translate(1px, 0);
-    }
-    70% {
-        transform: rotate(0deg) translate(2px, 0)
-    }
-    80% {
-        transform: rotate(-30deg) translate(3px, 0)
-    }
-    90% {
-        transform: rotate(0deg) translate(3px, 0)
-    }
-    100% {
-        transform: rotate(-30deg)  translate(4px, 0)
-    }
+.toggleMenu::after  {
+  transform: rotate(-90deg);
+  content: "Menu";
+  position: absolute;
+  top: 1.2rem;
+  right: -0.7rem;
+  width: 18px;
+  height: auto;
+  font-size: 0.7rem;
+  color: ${theme.colors.heading_color};
 }
+ /* .toggleMenu.isLoaded .toggleIcon  { 
+  animation: bounce-down 1.5s infinite; 
+} */
+
+
+
 
 .lineGradientTop {
-  position: absolute;
-  top: 60px;
-  left: 0;  
   height: 5px;
   width: 100vw;
   background: linear-gradient(to left, rgb(0, 214, 4) , rgb(114, 247, 114), rgb(0, 134, 255),rgb(46, 206, 255),rgb(164, 0, 225),rgb(199, 57, 255),rgb(255, 55, 168),rgb(255, 37, 58),rgb(255, 95, 95),rgb(255, 138, 0),rgb(255, 193, 18) ,rgb(255, 193, 18), rgb(252, 208, 0) ,rgb(255, 255, 74));
   z-index:108;
   animation-name: invertLineGradientTop;
+}
+@media screen and (min-width: 541px) {
+
 }
 @media screen and (min-width: 650px) {
   .inputBox {

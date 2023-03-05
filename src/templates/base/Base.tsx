@@ -6,25 +6,30 @@ import * as SBase from './styles';
 import Header from "ui/base/header";
 import Footer from "ui/base/footer";
 import MenuRight from "ui/base/menu-right";
-import Breadcrumbs from "components/Breadcrumbs";
+import Announcement from "ui/base/announcement";
 
 const Base = ({children}: { children: React.ReactNode }) => { 
+
+  
+
   // const {} = useBase(); 
   return (
     <SBase.BaseStyle>
     <div className="BaseTemplate">
-        <Breadcrumbs/>
     <Suspense fallback={<Skeleton/>}>
-      <Header/> 
+      <Header>
+        <Announcement/>
+      </Header>
     </Suspense>
        
     <main>    
     <Suspense fallback={<Skeleton/>}> 
       {children}  
     </Suspense>
+    <MenuRight/>
     </main>  
     <Footer/> 
-    <MenuRight/>
+    
     
   </div> 
   </SBase.BaseStyle>

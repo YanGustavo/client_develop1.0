@@ -11,13 +11,15 @@ import BarChart from "@mui/icons-material/BarChart";
 import SearchRounded from "@mui/icons-material/SearchRounded";
 import ShoppingCartRounded from "@mui/icons-material/ShoppingCartRounded";
 
-export default function Header() {
- //const {cart} = useHeader();
+
+const Header = ({children} :  {children: React.ReactNode } ) => { 
  useHeader();
  useHeaderAnimate();
   return (
     <SHeader.HeaderStyle>
       <header>
+        {children}
+        <div className ="header">
       <Link href="/">
       <img
         src="img/logo_name.png"
@@ -85,15 +87,9 @@ export default function Header() {
               {!userInfo && (<Link href="/login">Área de Pedidos</Link>)} */}
  </div>
      <div className="toggleMenu">
-        <BarChart className="toggleIcon" css={{
-        "&:hover": {
-          "path:first-of-type": {
-            transformOrigin: "center",
-            animation: "toggleMenuAnimate  1.5s forwards 1",
-          },
-        },
-      }} />
-      </div> 
+        <BarChart className="toggleIcon"/>
+      </div>       
+      </div>
       <div className="lineGradientTop"></div> 
       </header>    
     </SHeader.HeaderStyle>
@@ -101,3 +97,4 @@ export default function Header() {
 
   );
 }
+export default Header;
