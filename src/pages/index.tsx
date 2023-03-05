@@ -11,7 +11,7 @@ import { Skeleton} from 'components/Skeleton';
 
 
 export default function Home() { 
-  const { response, MenuItems, setData } = useHome(); // isMainData,
+  const { data, isLoading, products, MenuItems, setData } = useHome(); // isMainData,
   return (
     <Layout title="Home">
     <Suspense fallback={<Skeleton/>}>
@@ -44,10 +44,26 @@ export default function Home() {
             </section>           
             <section className="item-card-wrapper">
                <Suspense fallback={<Skeleton/>}>                
-               {response &&
-                response.map((product:any) => (                
+               {products &&
+                products.map((product:any) => (                
                <Card key={product.id} product={product}/>      
            ))}
+            </Suspense>            
+            </section>
+            <section className="item-card-wrapper">
+               <Suspense fallback={<Skeleton/>}>                
+               {isLoading ? (
+                <p> Loading...</p>
+               ) : (
+                <>
+                {data?.map((todo) => (
+                    <div key={todo.id}>
+                      <p>{todo.title}</p>
+                    </div>
+                ))}
+                </>
+               )
+}
             </Suspense>            
             </section>
           </div>

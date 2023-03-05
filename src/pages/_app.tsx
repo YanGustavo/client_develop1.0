@@ -1,4 +1,8 @@
 import { AppProps } from 'next/app';
+
+import { QueryClientProvider} from "@tanstack/react-query";
+import { queryClient } from "services/queryClient";
+
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from 'styles/styled-components/global';
 import theme from 'styles/styled-components/theme';
@@ -9,12 +13,14 @@ import reducer, { initialState } from "redux/reducer-temp";
 
 function App({ Component, pageProps }: AppProps) {
   return (    
+    <QueryClientProvider client = {queryClient}>
     <ThemeProvider theme={theme}>      
       <StateProvider initialState={initialState} reducer={reducer}> 
       <Component {...pageProps} />
       </StateProvider>
       <GlobalStyles />
     </ThemeProvider>
+    </QueryClientProvider>
   );
 }
 

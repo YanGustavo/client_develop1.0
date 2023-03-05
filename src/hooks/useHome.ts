@@ -1,9 +1,26 @@
 import React from 'react';
  import { MenuItems, Items } from "utils/data";
  import axios from "axios";
+ import api from "services/api";
+ import {useQuery} from "@tanstack/react-query";
+
+ type TodosProps = {
+  userId: number;
+  title: string;
+  id: number;
+ }
+const getTodos = async () => {
+  const response = await api.get<TodosProps[]>('/');
+  return response.data;
+}
 
 const useHome = () => { 
-  const [response, setResponse]:any = React.useState();
+  const { data, isLoading } = useQuery({
+    queryKey: ['todos'],
+    queryFn: getTodos,
+  })
+
+  const [products, setProducts]:any = React.useState();
   const sendGetRequest = React.useCallback(async () => {
     //'https://accounts.cartx.io/api/eai-chefinho/products',
     try {
@@ -14,7 +31,7 @@ const useHome = () => {
             },
             transformResponse: (data) => JSON.parse(data),
         });
-        setResponse(resp.data.products.data);
+        setProducts(resp.data.products.data);
         console.log(resp.data.products);//response.data.products.data[0].seo_title
     } catch (err) {
         console.error(err);
@@ -33,7 +50,9 @@ const useHome = () => {
   };
 
  return{ 
-  response, 
+  data,
+  isLoading,
+  products, 
   MenuItems,
   isMainData,
   setData,
