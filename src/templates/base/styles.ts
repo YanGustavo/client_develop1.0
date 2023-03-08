@@ -21,24 +21,16 @@ export const BaseMain = styled.main`
   position: relative;
 
 @media screen and (min-width: 541px) {
-  main {
-    width: 100vw;
-  }
+    width: 100vw; 
 }
 @media screen and (min-width: 650px) {
-  main {
     width: 100vw;
-  }
 }
 @media screen and (min-width: 950px) {
-  main {
     width: calc(100vw - 325px);
-  }
 }
 @media screen and (min-width: 1100px) {
-  main {
     width: calc(100vw - 350px);
-  }
 }
 
 `;

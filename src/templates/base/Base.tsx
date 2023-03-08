@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 //import Link from 'next/link';
 //import useBase from "./useBase";
-import { Skeleton} from 'components/Skeleton';
+import SkeletonComponent from 'components/SkeletonComponent';
 import * as SBase from './styles';
 import Header from "ui/base/header";
 import Footer from "ui/base/footer";
@@ -12,13 +12,13 @@ const Base = ({children}: { children: React.ReactNode }) => {
   // const {} = useBase(); 
   return (
     <SBase.BaseTemplate>
-    <Suspense fallback={<Skeleton/>}>
+    <Suspense fallback={<SkeletonComponent/>}>
       <Header>
         <Announcement/>
       </Header>
     </Suspense>       
     <SBase.BaseMain>  
-    <Suspense fallback={<Skeleton/>}> 
+    <Suspense fallback={<SkeletonComponent/>}> 
       {children}  
     </Suspense> 
     <Footer/>    

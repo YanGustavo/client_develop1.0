@@ -1,2 +1,10 @@
+export const PRIVACY_POLICY = "PRIVACY_POLICY";
+export const EXCHANGE_AND_REFUND_POLICY = "EXCHANGE_AND_REFUND_POLICY";
+export const SHIPPING_POLICY = "SHIPPING_POLICY";
+export const SERVICE_TERMS = "SERVICE_TERMS";
+export const CONTACT = "CONTACT";
+export const FAQ = "FAQ";
 export const ABOUT_US = "ABOUT_US";
 export const NOT_FOUND = "NOT_FOUND";
+export const LOADING = "LOADING";
+export const ERROR = "ERROR";

@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import Link from 'next/link';
 import useDash from "./useDash";
-import { Skeleton} from 'components/Skeleton';
+import { Skeleton} from 'components/SkeletonComponent';
 //import Link from 'next/link';
 import * as SDash from './styles';
 // import Header from "ui/Dash/header";

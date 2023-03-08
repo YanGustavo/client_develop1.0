@@ -1,5 +1,5 @@
 import React, {Suspense} from 'react';
-import { Skeleton} from 'components/Skeleton';
+import { Skeleton} from 'components/SkeletonComponent';
 import AccountBalanceWalletRounded from "@mui/icons-material/AccountBalanceWalletOutlined";
 import Chat from "@mui/icons-material/Chat";
 import Favorite from "@mui/icons-material/Favorite";

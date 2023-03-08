@@ -6,7 +6,7 @@ import Message from "components/Error";
 import Loading from "components/Loading";
 import FormLogin from "@/ui/base/form-login";
 import useLogin from "hooks/useLogin";
-import { Skeleton} from 'components/Skeleton';
+import { Skeleton} from 'components/SkeletonComponent';
 
 export default function Login () {
   const { error, loading, redirect, activeLogin, google } = useLogin(); 

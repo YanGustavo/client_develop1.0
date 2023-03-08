@@ -4,7 +4,7 @@ import { Base } from 'templates/base';
 //import Link from 'next/link';
 import StepCheckout from "@/ui/base/steps-checkout";
 import usePayment from "hooks/usePayment";
-import { Skeleton} from 'components/Skeleton';
+import SkeletonComponent from 'components/SkeletonComponent';
 
 export default function Payment () {
   usePayment(); 
@@ -14,7 +14,7 @@ export default function Payment () {
         {/* <Suspense fallback={<Skeleton/>}> */}
         {/* <StepCheckout/> */}
         {/* </Suspense> */}
-        <Skeleton/>
+        <SkeletonComponent/>
     </Base>
     </Layout>
   );

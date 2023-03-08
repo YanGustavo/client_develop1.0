@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import Link from 'next/link';
 import * as SMenuRight from './styles';
-import { Skeleton} from 'components/Skeleton';
+import { Skeleton} from 'components/SkeletonComponent';
 import useMenuRight from "./useMenuRight";
 import useMenuRightAnimate from "./useMenuRightAnimate";
 import CreditCard from "ui/base/credit-card";

@@ -1,5 +1,6 @@
 import * as SFooter from './styles';
 import Link from 'next/link';
+import { PRIVACY_POLICY, EXCHANGE_AND_REFUND_POLICY, SHIPPING_POLICY, SERVICE_TERMS, CONTACT, FAQ, ABOUT_US} from "constants/about-constants";
 
 export default function Footer() {
 
@@ -25,10 +26,10 @@ return(
                 <div className="footer-col">
                     <h4>Políticas</h4>
                     <ul>
-                        <li><Link href="/about">Política de Privacidade</Link></li>
-                        <li><Link href="/about">Política de Trocas e Reembolso</Link></li>
-                        <li><Link href="/about">Política de Envio</Link></li>
-                        <li><Link href="/about">Termos de Serviço</Link></li>
+                        <li><Link href={{ pathname: '/about', query: { keyword: PRIVACY_POLICY } }}>Política de Privacidade</Link></li>
+                        <li><Link href={{ pathname: '/about', query: { keyword: EXCHANGE_AND_REFUND_POLICY } }}>Política de Trocas e Reembolso</Link></li>
+                        <li><Link href={{ pathname: '/about', query: { keyword: SHIPPING_POLICY } }}>Política de Envio</Link></li>
+                        <li><Link href={{ pathname: '/about', query: { keyword: SERVICE_TERMS } }}>Termos de Serviço</Link></li>
                     </ul>
                 </div>
                 {/* end footer col */}
@@ -36,9 +37,9 @@ return(
                 <div className="footer-col">
                     <h4>Link´s Úteis</h4>
                     <ul>
-                        <li><Link href="/about">Contato</Link></li>
-                        <li><Link href="/about">FAQ - Perguntas Frequentes</Link></li>
-                        <li><Link href={{ pathname: '/about', query: { keyword: 'ABOUT_US' } }}>Sobre Nós</Link></li>
+                        <li><Link href={{ pathname: '/about', query: { keyword: CONTACT } }}>Contato</Link></li>
+                        <li><Link href={{ pathname: '/about', query: { keyword: FAQ } }}>FAQ - Perguntas Frequentes</Link></li>
+                        <li><Link href={{ pathname: '/about', query: { keyword: ABOUT_US } }}>Sobre Nós</Link></li>
                     </ul>
                 </div>
                 {/* end footer col */}             

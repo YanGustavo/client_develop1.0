@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 //import Link from 'next/link';
 //import useBase from "./useBase";
-import { Skeleton} from 'components/Skeleton';
+import { Skeleton} from 'components/SkeletonComponent';
 import * as SBase from './styles';
 import Header from "ui/base/header";
 import Footer from "ui/base/footer";

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from 'styles/styled-components/theme';
 export const NotFoundStyle = styled.footer`
- .main{
+ .notFoundMain{
   margin-top: 15%;
 }
 

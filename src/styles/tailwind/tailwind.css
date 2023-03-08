@@ -791,10 +791,6 @@ video {
   animation: rerender 1s ease-in-out 1;
 }
 
-.resize {
-  resize: both;
-}
-
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }

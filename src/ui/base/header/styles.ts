@@ -18,6 +18,20 @@ header {
   height: 40px;
   width: 100%;
   background: ${theme.colors.background}; 
+  display: flex;
+  align-content: flex-start;
+  align-items: center;
+}
+.marquee {
+    position: absolute;
+    white-space: nowrap;
+    -webkit-animation: rightThenLeft 4s linear;
+}
+
+@-webkit-keyframes rightThenLeft {
+    0%   {left: 0%;}
+    50%  {left: 100%;}
+    100% {left: 0%;}
 }
 .header{
   display: flex;

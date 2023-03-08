@@ -19,7 +19,9 @@ const Header = ({children} :  {children: React.ReactNode } ) => {
     <SHeader.HeaderStyle>
       <header>
         <div className="top-announcement">
-        {children}
+          <div className="marquee">
+          {children}
+          </div>        
         </div>        
         <div className ="header">
       <Link href="/">
