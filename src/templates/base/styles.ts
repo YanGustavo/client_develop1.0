@@ -1,27 +1,25 @@
 import styled from 'styled-components';
 
 import theme from 'styles/styled-components/theme';
-
-export const BaseStyle = styled.div`
-.BaseTemplate {
-  margin:0;
+export const BaseTemplate = styled.div`
+ margin:0;
   padding: 0;
   width: 100vw;
   height: 100vh;  
   position: relative;
   overflow-x: hidden;
-}
-.BaseTemplate::-webkit-scrollbar {
+  .BaseTemplate::-webkit-scrollbar {
   display: none;
 }
-main {
+`;
+export const BaseMain = styled.main`
   margin-top: 105px;
   width: 100vw;
   height: auto;
   position: relative;
   display: block;
   position: relative;
-}
+
 @media screen and (min-width: 541px) {
   main {
     width: 100vw;

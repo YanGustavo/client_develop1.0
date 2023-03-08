@@ -9,29 +9,39 @@ import MenuRight from "ui/base/menu-right";
 import Announcement from "ui/base/announcement";
 
 const Base = ({children}: { children: React.ReactNode }) => { 
-
-  
-
   // const {} = useBase(); 
   return (
-    <SBase.BaseStyle>
-    <div className="BaseTemplate">
+    <SBase.BaseTemplate>
     <Suspense fallback={<Skeleton/>}>
       <Header>
         <Announcement/>
       </Header>
-    </Suspense>
-       
-    <main>    
+    </Suspense>       
+    <SBase.BaseMain>  
     <Suspense fallback={<Skeleton/>}> 
       {children}  
     </Suspense> 
     <Footer/>    
-    </main>      
-    <MenuRight/>  
+    </SBase.BaseMain>      
+    <MenuRight/> 
+    {/*
+    Suporte
+
+ Qualquer dúvida ou problema pode nos contatar. Botão de Chat no canto inferior direito.
+
+Satisfação ou Reembolso
+
+Se não estiver satisfeito, entre em contato conosco.
+
+Pagamento Seguro
+
+Pagamento Seguro processado pela MERCADO PAGO
+
+Frete Grátis
+
+Válido para todo o Brasil! aproveite!  */}
     
-  </div> 
-  </SBase.BaseStyle>
+  </SBase.BaseTemplate>
   );
 }  
 export default Base;

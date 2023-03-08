@@ -12,9 +12,9 @@ export default function Payment () {
     <Layout title="Product">
     <Base>
         {/* <Suspense fallback={<Skeleton/>}> */}
-        <StepCheckout/>
+        {/* <StepCheckout/> */}
         {/* </Suspense> */}
-         
+        <Skeleton/>
     </Base>
     </Layout>
   );

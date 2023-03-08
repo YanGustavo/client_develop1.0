@@ -1,19 +1,17 @@
-import React, {Suspense} from 'react';
+import React from 'react';
 import Layout from 'components/layout';
 import { Base } from 'templates/base';
 import useAbout from "hooks/useAbout";
-import { useThemeProps } from '@mui/material';
-//import NotFound from "ui/all/not-found";
+import { useRouter } from 'next/router';
 
-export default function About(param) {
-  console.log(param);
-  const  child  = useAbout();  
+export default function About() {  
+  const router = useRouter();
+  const  child  = useAbout(router.query);  
   return (
     <Layout title="About">
       <Base>
       <section className="container container--flush">
-        {child}
-       
+        {child}       
       </section>
       </Base>  
     </Layout>

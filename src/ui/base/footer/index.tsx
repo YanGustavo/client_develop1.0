@@ -38,7 +38,7 @@ return(
                     <ul>
                         <li><Link href="/about">Contato</Link></li>
                         <li><Link href="/about">FAQ - Perguntas Frequentes</Link></li>
-                        <li><Link href="/about">Sobre Nós</Link></li>
+                        <li><Link href={{ pathname: '/about', query: { keyword: 'ABOUT_US' } }}>Sobre Nós</Link></li>
                     </ul>
                 </div>
                 {/* end footer col */}             
