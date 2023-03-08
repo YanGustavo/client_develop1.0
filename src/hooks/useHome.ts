@@ -23,8 +23,9 @@ const useHome = () => {
   const [products, setProducts]:any = React.useState();
   const sendGetRequest = React.useCallback(async () => {
     //'https://accounts.cartx.io/api/eai-chefinho/products',
+    //https://stoplight.io/mocks/cartx/cartx-api-doc/4235477/e/products
     try {
-        const resp = await axios.get('https://stoplight.io/mocks/cartx/cartx-api-doc/4235477/e/products', {
+        const resp = await axios.get('https://bling.com.br/Api/v2/produtos/json&apikey=204381037', {
             headers: {
               'Content-Type': 'application/json',
               'authorization': 'Bearer Y6TPosMhWM2GjTWrvKeGv2W6cR8kSg39EwND9tdnM98yBEcJthsFEHaYALbY'

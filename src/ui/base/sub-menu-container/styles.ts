@@ -5,9 +5,11 @@ import theme from 'styles/styled-components/theme';
 export const SubMenuContainerStyle = styled.div`
 .subMenuContianer,
 .viewAll {
+  padding: 0;
+  margin:0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  //align-items: center;
 }
 
 .subMenuContianer h3 {

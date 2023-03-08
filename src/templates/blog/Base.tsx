@@ -25,10 +25,11 @@ const Base = ({children}: { children: React.ReactNode }) => {
     <main>    
     <Suspense fallback={<Skeleton/>}> 
       {children}  
-    </Suspense> 
-    <Footer/>    
-    </main>      
-    <MenuRight/>  
+    </Suspense>
+    <MenuRight/>
+    </main>  
+    <Footer/> 
+    
     
   </div> 
   </SBase.BaseStyle>

@@ -18,7 +18,9 @@ const Header = ({children} :  {children: React.ReactNode } ) => {
   return (
     <SHeader.HeaderStyle>
       <header>
+        <div className="top-announcement">
         {children}
+        </div>        
         <div className ="header">
       <Link href="/">
       <img

@@ -13,7 +13,7 @@ type SubMenuContainerProps = {
 const SubMenuContainer = ({title, subtitle, linkHref}: SubMenuContainerProps)  => {
   return (
     <SSubMenuContainer.SubMenuContainerStyle>
-    <div className="subMenuContianer">
+    <div className="container subMenuContianer">
       <h3>{title}</h3>
       <div className="viewAll">
         <p>{subtitle}</p>

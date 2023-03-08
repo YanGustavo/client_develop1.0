@@ -8,15 +8,16 @@ import Settings from "@mui/icons-material/Settings";
 import SummarizeRounded from "@mui/icons-material/SummarizeRounded";
 import * as SMenuBottom from './styles';
 import MenuContainer from "@/ui/base/menu-container";
-import useMenuBottom from "./useMenuBottom";
+//import useMenuBottom from "./useMenuBottom";
+import useAnimate from "./useAnimate";
 const MenuBottom =() => {
-  useMenuBottom();
+  //useMenuBottom();
+  useAnimate();
   return (
     <SMenuBottom.MenuBottomStyle>
       {/* Left menu */}
     <div className="menuBottom">
       <ul id="menu">
-        <Suspense fallback={<Skeleton/>}>
         {/* prettier-ignore */}
         <MenuContainer link={'/'} icon={<HomeRounded/>} isHome={true}/>
           {/* prettier-ignore */}
@@ -29,7 +30,6 @@ const MenuBottom =() => {
           <MenuContainer link={'#'} icon={<SummarizeRounded/>}/>
           {/* prettier-ignore */}
           <MenuContainer link={'#'} icon={<Settings/>}/>
-          </Suspense>
           <div className="indicator"></div>
       </ul>
     </div> 

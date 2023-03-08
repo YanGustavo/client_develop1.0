@@ -30,14 +30,13 @@ const useCard = () => { //itemId, imgSrc, name, price, ratings,
   // name,
   // price,
   // ratings,
- return(
-  
+ return{
   isFavourite,  
   //currentValue,
   setIsFavourite,
   setIsFavourite,
   setCart,
   handleClick,
- ) 
+ };   
 }
 export default useCard;

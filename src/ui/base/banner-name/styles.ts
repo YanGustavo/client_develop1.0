@@ -16,6 +16,7 @@ export const BannerNameStyle = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+  margin-top: 1rem;
   
 }
 #road {

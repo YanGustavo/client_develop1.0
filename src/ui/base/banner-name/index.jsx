@@ -6,7 +6,7 @@ function BannerName({ name, discount, more }) {
   const currency = "R$: ";
   return (
     <SBannerName.BannerNameStyle>
-      <div id="stage"  className="banner">
+      <div id="stage"  className="container banner">
       <div >
   <div id="road">
     <div id="stripes"></div>

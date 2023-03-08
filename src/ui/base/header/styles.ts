@@ -6,20 +6,25 @@ header {
   top: 0;
   left: 0;
   width: 100vw;
+  height: 105px;
   z-index: 101;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: relative;
+}
+.top-announcement {
+  height: 40px;
+  width: 100%;
+  background: ${theme.colors.background}; 
 }
 .header{
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 5px 15px;
-  min-height: 60px;
+  height: 60px;
   width: 100%;
   background: #fff;  
   
@@ -152,17 +157,6 @@ Link, a {
  /* .toggleMenu.isLoaded .toggleIcon  { 
   animation: bounce-down 1.5s infinite; 
 } */
-
-
-
-
-.lineGradientTop {
-  height: 5px;
-  width: 100vw;
-  background: linear-gradient(to left, rgb(0, 214, 4) , rgb(114, 247, 114), rgb(0, 134, 255),rgb(46, 206, 255),rgb(164, 0, 225),rgb(199, 57, 255),rgb(255, 55, 168),rgb(255, 37, 58),rgb(255, 95, 95),rgb(255, 138, 0),rgb(255, 193, 18) ,rgb(255, 193, 18), rgb(252, 208, 0) ,rgb(255, 255, 74));
-  z-index:108;
-  animation-name: invertLineGradientTop;
-}
 @media screen and (min-width: 541px) {
 
 }

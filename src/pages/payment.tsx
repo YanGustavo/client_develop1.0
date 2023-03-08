@@ -9,7 +9,7 @@ import { Skeleton} from 'components/Skeleton';
 export default function Payment () {
   usePayment(); 
   return (
-    <Layout title="Login">
+    <Layout title="Product">
     <Base>
         {/* <Suspense fallback={<Skeleton/>}> */}
         <StepCheckout/>

@@ -4,11 +4,11 @@ import theme from 'styles/styled-components/theme';
 
 export const MenuRightStyle = styled.div`
 .menuRight {  
-  position: absolute;  
-  top: 0;
+  position: fixed;  
+  top: 105px;
   right: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 105px);
   background: #fff;
   z-index: 105;
   display: flex;
@@ -17,6 +17,7 @@ export const MenuRightStyle = styled.div`
   transform: translateX(200%);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+  border-left: 1px solid ${theme.colors.heading_color};
   
 }
 
@@ -24,10 +25,10 @@ export const MenuRightStyle = styled.div`
   transform: translateX(0%);
 }
 @keyframes closeMenuAnimation {
-	0% { opacity: 0; transform: translateY(-2px); color: indigo;  }
-  25% { opacity: 0; transform: translateY(-2px); color: green;  }
-	50% { opacity: 1; transform: translateY(0); color: greenyellow;}
-	100% { opacity: 0; transform: translateY(2px); color: green;}
+	0% { opacity: 1; transform: translateY(-2px); color: black;  }
+  25% { opacity: 0.8; transform: translateY(-2px); color: green;  }
+	50% { opacity: 1; transform: translateY(0); color: black;}
+	100% { opacity: 1; transform: translateY(2px); color: green;}
 }  
 .closeMenu {
   position: absolute;
@@ -35,6 +36,12 @@ export const MenuRightStyle = styled.div`
   right: 1rem;
   z-index: 109;
   transform: translateX(0);
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  animation: closeMenuAnimation 1.5s infinite; 
 }
 
 
@@ -42,18 +49,7 @@ export const MenuRightStyle = styled.div`
   color: #373848;
   font-size: 30px !important;
   transition: all 0.5s ease; 
-  animation: closeMenuAnimation 1.5s infinite; 
   
-}
-.closeMenu::after  {
-  content: "Fechar";
-  position: absolute;
-  top: 1.2rem;
-  right: -0.7rem;
-  width: 18px;
-  height: auto;
-  font-size: 0.7rem;
-  color: ${theme.colors.heading_color};
 }
 .debitCardContainer {
   padding: 10px;
@@ -354,19 +350,18 @@ export const MenuRightStyle = styled.div`
   transform: translateX(200%);
   display: none;
 }
-.footer-component{
-  position: absoluete;
+.footer-component{  
+  position: absolute;
   bottom: 0;
   left: 0; 
   width: 100%;
-  height: auto;
+  height: 3rem;
   z-index: 106;
 }
 @media screen and (min-width: 541px) {
   .menuRight {
     width: 280px;
-    height: calc(100vh - 105px);
-    transform: translateX(0%);
+    padding-bottom: 3rem;
   }
    .addSomeItem {
     width: 15rem;
@@ -384,13 +379,14 @@ export const MenuRightStyle = styled.div`
 }
 @media screen and (min-width: 950px) {
   .menuRight {
-    width: 325px;    
+    width: 325px; 
+    transform: translateX(0%);
   }
   .closeMenu {
-    transform: translateX(200%);
+    display: none;
   }
   .addSomeItem {
-    width: 19rem;
+  width: 19rem;
   height: 24rem;
   }
 }

@@ -6,6 +6,7 @@ const useHeader = () => {
       document.querySelector(".menuRight").classList.add("active");
       toggleIcon.classList.add("hidden");
     }); 
+    
  });
  return;  
 }

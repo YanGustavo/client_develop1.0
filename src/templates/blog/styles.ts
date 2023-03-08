@@ -4,43 +4,30 @@ import theme from 'styles/styled-components/theme';
 
 export const BaseStyle = styled.div`
 .BaseTemplate {
-  margin:0;
-  padding: 0;
   width: 100vw;
-  height: 100vh;  
-  position: relative;
+  height: 100vh;
+  background: ${theme.colors.background};
   overflow-x: hidden;
+  position: relative;
 }
 .BaseTemplate::-webkit-scrollbar {
   display: none;
 }
 main {
-  margin-top: 105px;
   width: 100vw;
+  /* height: calc(100% - 60px); */
   height: auto;
+  min-height: calc(100vh - 70px);
   position: relative;
-  display: block;
-  position: relative;
-}
-@media screen and (min-width: 541px) {
-  main {
-    width: 100vw;
-  }
 }
 @media screen and (min-width: 650px) {
-  main {
-    width: 100vw;
-  }
+
 }
 @media screen and (min-width: 950px) {
   main {
-    width: calc(100vw - 325px);
-  }
-}
-@media screen and (min-width: 1100px) {
-  main {
     width: calc(100vw - 350px);
+    display: flex;
+    position: relative;
   }
 }
-
 `;

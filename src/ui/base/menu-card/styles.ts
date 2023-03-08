@@ -7,13 +7,13 @@ export const MenuCardStyle = styled.div`
   width: 4rem;
   height: 4rem;
   border-radius: 0.4rem;
-  //background: #fff;
   margin-right: 0.5rem;
-  /* display: flex;
-  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; */
+  flex-wrap: wrap; 
+  flex-direction: row;
+  overflow-x: scroll;
   display: inline-block;
   padding: 0.2rem;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);

@@ -14,16 +14,12 @@ export default function Home() {
   const { data, isLoading, products, MenuItems, setData } = useHome(); // isMainData,
   return (
     <Layout title="Home">
-    <Suspense fallback={<Skeleton/>}>
      <Base>
      <SHome.HomeStyle>  
-     <div className="container">
       <Suspense fallback={<Skeleton/>}>
       <BannerName name="Chefinho" discount={"20"} more={"#"} />
-      </Suspense>
-       <div className="wrapper">
-            
-             <section className="row">
+      </Suspense>            
+             <section className="container">
                   <Suspense fallback={<Skeleton/>}>
                   {MenuItems &&
                   MenuItems.map((data:any) => (
@@ -37,12 +33,12 @@ export default function Home() {
                 ))}
                 </Suspense>
             </section> 
-            <section className="menuCard">
+            <section>
             <Suspense fallback={<Skeleton/>}>
                <SubMenuContainer title="iPhones" subtitle="Saiba Mais" linkHref="/login" />
             </Suspense>
             </section>           
-            <section className="item-card-wrapper">
+            <section className="container container--flush">
                <Suspense fallback={<Skeleton/>}>                
                {products &&
                 products.map((product:any) => (                
@@ -50,7 +46,7 @@ export default function Home() {
            ))}
             </Suspense>            
             </section>
-            <section className="item-card-wrapper">
+            <section className="container container--flush">
                <Suspense fallback={<Skeleton/>}>                
                {isLoading ? (
                 <p> Loading...</p>
@@ -66,11 +62,8 @@ export default function Home() {
 }
             </Suspense>            
             </section>
-          </div>
-        </div> 
         </SHome.HomeStyle>         
      </Base>
-     </Suspense>
     </Layout>
   );
 }
