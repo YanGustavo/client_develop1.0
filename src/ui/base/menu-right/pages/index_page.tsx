@@ -6,10 +6,11 @@ import * as SMenuRight from '../styles';
 import CreditCard from "ui/base/credit-card";
 import CartItem from "ui/base/cart-item";
 import Button from "components/Button";
-import useIndex from "./hooks/useIndex";
-import useIndexAnimate from "./hooks/useIndexAnimate";
+import useIndexPage from "./hooks/useIndexPage";
+import useIndexPageAnimate from "./hooks/useIndexPageAnimate";
 export default function IndexPage() {
-  const {cart, total, totalPrice} = useIndex();
+  const {cart, total, totalPrice} = useIndexPage();
+  useIndexPageAnimate();
   return (
     <>
               <Container>
@@ -39,8 +40,9 @@ export default function IndexPage() {
                   <span>$ </span>10,00 {totalPrice}
                 </p>
                 </Container>
-                {/* prettier-ignore */}
+                
                 <Container>
+                  {/* prettier-ignore */}
                     <Button color='custom' variant='secondary' size='large'><Link href="">Check Out</Link></Button>
                 </Container>
      <Container>

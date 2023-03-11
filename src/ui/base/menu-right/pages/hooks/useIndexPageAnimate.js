@@ -1,5 +1,5 @@
 import { useStateValue } from "context/state-provider";
-const useIndexAnimate = ({cart, total, totalPrice}) => {
+const useIndexPageAnimate = ({cart, total, totalPrice}) => {
   
  React.useEffect(() => {
    if(cart){
@@ -8,4 +8,4 @@ const useIndexAnimate = ({cart, total, totalPrice}) => {
 }, [cart, total, totalPrice]); 
 return;
 }
-export default useIndexAnimate;
+export default useIndexPageAnimate;

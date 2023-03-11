@@ -1,6 +1,6 @@
 import React from "react";
 import { useStateValue } from "context/state-provider";
-const useIndex = () => {
+const useIndexPage = () => {
   const [{ cart, total }, dispatch] = useStateValue();
   const [totalPrice, setTotalPrice] = React.useState(0);
  React.useEffect(() => {
@@ -14,4 +14,4 @@ return {
   totalPrice,
 }
 }
-export default useIndex;
+export default useIndexPage;

@@ -32,6 +32,7 @@ const useRightMenu = () => {
     },[value]);
 
 return{ 
+  data,
  isPending,
  content,
 };
