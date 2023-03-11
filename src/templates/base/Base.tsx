@@ -7,10 +7,12 @@ import Header from "ui/base/header";
 import Footer from "ui/base/footer";
 import MenuRight from "ui/base/menu-right";
 import Announcement from "ui/base/announcement";
+import {RightMenuContextProvider} from "context/RightMenuContext";
 
 const Base = ({children}: { children: React.ReactNode }) => { 
   // const {} = useBase(); 
   return (
+    <RightMenuContextProvider>
     <SBase.BaseTemplate>
     <Suspense fallback={<SkeletonComponent/>}>
       <Header>
@@ -42,6 +44,7 @@ Frete Grátis
 Válido para todo o Brasil! aproveite!  */}
     
   </SBase.BaseTemplate>
+  </RightMenuContextProvider>
   );
 }  
 export default Base;

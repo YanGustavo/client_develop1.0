@@ -8,8 +8,7 @@ export const MenuBottomStyle = styled.div`
   position: relative;
   width: 100%;
   height: 3.2rem;
-  background: ${theme.colors.heading_color};
-  
+  background: ${theme.colors.heading_color};  
 }
 
 .menuBottom ul {

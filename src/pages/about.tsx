@@ -3,23 +3,23 @@ import Layout from 'components/layout';
 import { Base } from 'templates/base';
 import useAbout from "hooks/useAbout";
 import { useRouter } from 'next/router';
-import { NOT_FOUND, LOADING, ERROR } from "constants/about-constants";
-import SkeletonComponent from "components/SkeletonComponent";
-import NotFound from "ui/all/not-found";
-import Error from "components/Error";
+import {Container, ContainerFlush} from 'templates/base/styles';
+import LayoutTransition from 'components/layoutTransition';
 
 export default function About() {  
   const router = useRouter();
-  const  {data}  = useAbout(router.query);  
+  const  {data, isPending, content}  = useAbout(router.query);  
   return (
-    <Layout title={data ? data.title: ''}>
+    <Layout title={data ? data: ''}>
       <Base>
-      <section className="container container--flush">
-        {data.type === LOADING && (<SkeletonComponent/>)}
-        {data.type === ERROR && (<Error/>)}
-        {data.type === NOT_FOUND && (<NotFound/>)}
-        {!(data.type === LOADING || data.type === ERROR || data.type === NOT_FOUND) && (<p>{data.body}</p>)}      
-      </section>
+      <LayoutTransition isPending={isPending}>
+      <Container>
+        <ContainerFlush>
+        {content}
+        </ContainerFlush>
+        </Container>
+                
+      </LayoutTransition>
       </Base>  
     </Layout>
   );

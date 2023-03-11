@@ -1,21 +1,39 @@
 import React from 'react';
-//import {  useSelector } from "react-redux"; //useDispatch,
-// import { MenuItems, Items } from "utils/data";
-import { useStateValue } from "context/state-provider";
-const useRightMenu = () => {
-   // const userLogin = useSelector((state) => state.userLogin);
-  // const { userInfo } = userLogin;
-  const [{ cart, total }, dispatch] = useStateValue();
-  const [totalPrice, setTotalPrice] = React.useState(0);
- React.useEffect(() => {
-   if(cart){
-     document.querySelector(".addSomeItem").classList.toggle("unactive");
-   }
-}, [cart, total, totalPrice]); 
+import IndexPage from './pages/index_page';
+import OrderPage from './pages/order_page';
+import {useRightMenuContext} from "context/RightMenuContext";
+import * as actionTypes from 'context/RightMenuContext/action-types';
+const useRightMenu = () => {  
+  const [data, setData] = React.useState("Carregando"); 
+  const [page, setPage] = React.useState(null);
+  const [isPending, startTransition] = React.useTransition(); 
+  const [{ value, loading }, actions] = useRightMenuContext();
 
-return{  
- cart,
- total,
+  function navigate(value) {
+    startTransition(() => {
+      setPage(value);
+    });
+  }
+   let content;
+  if (page === actionTypes.HOME) {
+    setData("Eai Chefinho, Seja bem vindo!");
+    content = (
+      <IndexPage/>
+    );
+  } else if (page === actionTypes.ORDER) {
+    setData("Seus Pedidos");
+    content = (
+      <OrderPage />
+    );
+  }
+
+  React.useEffect(() => {
+   navigate(value);
+    },[value]);
+
+return{ 
+ isPending,
+ content,
 };
 }
 export default useRightMenu;

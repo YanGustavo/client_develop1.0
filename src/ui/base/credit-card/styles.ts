@@ -30,8 +30,7 @@ export const CreditCardStyle = styled.div`
       color: hsl(0,0%,100%);  
       width: 14.3em;  // 10.3em;  
       height: 8.8em; // 6.8em;  
-      transform: translate3d(0,0,0);  
-      margin-left: 10px;
+      transform: translate3d(0,0,0); 
  }  
  .card__info,  
  .card__chip-texture,  

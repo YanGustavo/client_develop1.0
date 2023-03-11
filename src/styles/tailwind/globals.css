@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.alert-error {
+  @apply my-3 rounded-lg bg-red-100 p-3 text-red-700;
+}
+
+.alert-success {
+  @apply my-3 rounded-lg bg-green-100 p-3 text-green-700;
+}
 
 .container {
   width: 100%;
@@ -13,26 +20,4 @@
 .container--flush {
   background: #FFFFFF;
   border-radius: 0.2rem;
-}
-@media screen and (min-width: 541px) {
- .container{
-  width: 98%;
-  margin-left: 1%;
-  margin-right: 1%;
- }
-}
-@media screen and (min-width: 650px) {
- .container{
-  
- }
-}
-@media screen and (min-width: 950px) {
-  .container{
-  
-  }
-}
-@media screen and (min-width: 1100px) {
-  .container{
-  
-  }
 }

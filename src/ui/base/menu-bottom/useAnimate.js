@@ -10,7 +10,7 @@ const useAnimate = () => {
       });
     }
 
-    menuLi.forEach((n) => n.addEventListener("click", setMenuActive));
+    menuLi.forEach((n) => n.addEventListener("mouseover", setMenuActive));
  });
  return;  
 }

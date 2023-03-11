@@ -41,6 +41,7 @@
     "redux-thunk": "^2.4.2",
     "styled-components": "^5.3.6",
     "styled-jsx": "^5.1.2",
+    "styled-system": "^5.1.5",
     "use-count-up": "^3.0.1"
   },
   "devDependencies": {

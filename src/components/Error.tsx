@@ -1,6 +1,9 @@
-'use client';
 import React from "react";
+type MessageProps = {
+  variant?: string;
+  children: any;
+}
 
-export default function Message (variant:any, children:any) { //variante alert-info
+export default function Message ({variant="", children}: MessageProps) { //variante alert-info
   return <div className={`alert ${variant}`}>{children}</div>;
 };

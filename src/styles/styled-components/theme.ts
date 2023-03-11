@@ -1,10 +1,35 @@
+import { color, space, fontSize, buttonStyle, variant } from 'styled-system'
 export default {
+  buttons: {
+    primary: {
+      color: 'white',
+      backgroundColor: '#2d4b2a',
+    },
+    secondary: {
+      color: 'white',
+      backgroundColor: '#daa520',
+    }  
+  },
+buttonSizes: {
+    small: {
+      fontSize: '15px',
+      padding: `7px 15px`,
+    },
+    medium: {
+      fontSize: '18px',
+      padding: `9px 20px`,
+    },
+    large: {
+      fontSize: '22px',
+      padding: `15px 30px`,
+    }
+  },
   grid: {
     container: '130rem',
-    gutter: '3.2rem'
+    gutter: '3.2rem',
   },
   border: {
-    radius: '0.4rem'
+    radius: '0.4rem',
   },
   box: {
     shadow: '0 8px 8px rgba(0, 0, 0, 0.08)'
@@ -42,6 +67,8 @@ export default {
     header_light: '#2d5734',
     background: '#35511e',
     black: '#000000',
+    custom: '#444',
+    yellow: 'yellow'
   },
   spacings: {
     xxxsmall: '0.8rem',
@@ -64,4 +91,5 @@ export default {
     default: '0.3s ease-in-out',
     fast: '0.1s ease-in-out'
   }
+ 
 } as const;
