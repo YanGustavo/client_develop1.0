@@ -1,13 +1,13 @@
 export default function LayoutTransition({ children, isPending }) {
   return (
-    <div className="layout">
-      <section className="header" style={{
+    <div>
+      <section  style={{
         opacity: isPending ? 0.7 : 1
       }}>
       </section>
-      <main>
+      <section>
         {children}
-      </main>
+      </section>
     </div>
   );
 }

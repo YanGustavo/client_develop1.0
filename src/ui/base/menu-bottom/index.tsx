@@ -23,7 +23,7 @@ const MenuBottom =() => {
     <div className="menuBottom">
       <ul id="menu">
         {/* prettier-ignore */}
-        <MenuContainer click={actionTypes.HOME} link={'/'} icon={<HomeRounded/>} isHome={true}/>
+        <MenuContainer click={actionTypes.HOME} link={'#'} icon={<HomeRounded/>} isHome={true}/>
           {/* prettier-ignore */}
           <MenuContainer click={actionTypes.ORDER} link={'#'} icon={<Chat/>}/>
           {/* prettier-ignore */}

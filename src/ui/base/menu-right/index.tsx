@@ -1,4 +1,8 @@
 import React from 'react';
+
+import {ErrorBoundary} from 'react-error-boundary';
+import ErrorFallback from 'components/ErrorFallback';
+
 import * as SMenuRight from './styles';
 import useMenuRight from "./useMenuRight";
 import useMenuRightAnimate from "./useMenuRightAnimate";
@@ -15,13 +19,18 @@ import LayoutTransition from 'components/layoutTransition';
   useMenuRightAnimate(); 
   
 return (
+  <ErrorBoundary
+    fallbackRender={({error, resetErrorBoundary}) => (<ErrorFallback error={error}
+      resetErrorBoundary={resetErrorBoundary}/>
+    )}
+    >  
       <SMenuRight.MenuRight className ="menuRight">
         <SMenuRight.CloseMenu className = "closeMenu">
             <CloseIcon className="toggleIcon"/>
           </SMenuRight.CloseMenu>
         <SMenuRight.MenuRightTop>
          <Container>
-          {data}
+          {false && (data)}
           </Container>                  
             </SMenuRight.MenuRightTop>
 <SMenuRight.MenuRightCenter>
@@ -33,6 +42,7 @@ return (
               <MenuBottom/>
               </SMenuRight.MenuRightBottom>
   </SMenuRight.MenuRight>
+  </ErrorBoundary> 
 );
 }
 export default MenuRight;

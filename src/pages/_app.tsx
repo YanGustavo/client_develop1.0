@@ -1,8 +1,6 @@
 import { AppProps } from 'next/app';
 //import { SessionProvider, useSession } from 'next-auth/react';
 //import { useRouter } from 'next/router';
-import {ErrorBoundary} from 'react-error-boundary';
-import ErrorFallback from 'components/ErrorFallback';
 
 import { QueryClientProvider} from "@tanstack/react-query";
 import { queryClient } from "services/queryClient";
@@ -16,12 +14,7 @@ import { StateProvider } from "context/state-provider";
 import reducer, { initialState } from "redux/reducer-temp";
 
 function App({ Component, pageProps: { ...pageProps } }: AppProps) {
-  return ( 
-    <ErrorBoundary
-    fallbackRender={({error, resetErrorBoundary}) => (<ErrorFallBack error={error}
-      resetErrorBoundary={resetErrorBoundary}/>
-    )}
-    >   
+  return (  
     <QueryClientProvider client = {queryClient}>
     <ThemeProvider theme={theme}>      
       <StateProvider initialState={initialState} reducer={reducer}> 
@@ -30,7 +23,6 @@ function App({ Component, pageProps: { ...pageProps } }: AppProps) {
       <GlobalStyles />
     </ThemeProvider>
     </QueryClientProvider>
-    </ErrorBoundary> 
   );
 }
 

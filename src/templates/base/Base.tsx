@@ -25,7 +25,8 @@ const Base = ({children}: { children: React.ReactNode }) => {
     </Suspense> 
     <Footer/>    
     </SBase.BaseMain>      
-    <MenuRight/> 
+    {false && (<MenuRight/>)} 
+    <MenuRight/>
     {/*
     Suporte
 

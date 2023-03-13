@@ -13,12 +13,11 @@ import Error from "components/Error";
 
 const useAbout = (router) => { 
   const [data, setData] = React.useState("Carregando");
-
   const [page, setPage] = React.useState(LOADING);
   const [content, setContent] = React.useState(<SkeletonComponent/>);
   const [isPending, startTransition] = React.useTransition(); 
 
-    const navigate = (router) => {
+    const navigate = React.useCallback((router) => {
       startTransition(() => {
         setPage(router); 
         if (page === PRIVACY_POLICY ){
@@ -47,11 +46,12 @@ const useAbout = (router) => {
             setData("Página Não Encontrada");
             setContent(<NotFound/>);
           }
-    setData("Desculpe tivemos um problema, tente recarregar a página novamente!");
-    setContent(<Error variant="alert-error"><p>{data}</p></Error>);
+    // setData("Desculpe tivemos um problema, tente recarregar a página novamente!");
+    // setContent(<Error variant="alert-error"><p>{data}</p></Error>);
       });      
-    }
-React.useEffect(() => { 
+    },[]);
+
+  React.useEffect(() => { 
     if (router !== undefined){        
       navigate(router.keyword);
     }     
